@@ -21,7 +21,7 @@ function DesList({desLessons}) {
 
     return (
         <div className="list-container">
-            <div className="list-container-top">
+            <div className="list-container-top mb-2">
                 <h3>Design:</h3>
                 <a href="/design">View All</a>
             </div>

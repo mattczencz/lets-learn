@@ -5,7 +5,7 @@ function Hero () {
     return(
         <section id="home-hero">
             <div id="home-hero-circle">
-                <p>OR</p>    
+                <h1>OR</h1>    
             </div>    
             <div className="home-hero-box">
                 <h1>DEV</h1>

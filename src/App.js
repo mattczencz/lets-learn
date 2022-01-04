@@ -10,6 +10,13 @@ import Home from './pages/Home';
 import Design from './pages/Design';
 import Development from './pages/Development';
 
+// Importing Header and Footer
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+// Importing Bootstrap Components 
+import Spinner from 'react-bootstrap/Spinner';
+
 
 function App() {
   // URL for API data
@@ -32,32 +39,39 @@ function App() {
   // If there is something in the allLessons state, load the app. Otherwise, print App is loading
   if(allLessons !== null){
     return (
-      <main>
-        <Switch>
-  
-          {/* Home page */}
-          <Route exact path="/">
-              <Home allLessons={allLessons}/>
-          </Route>
-  
-          {/* Development Lessons Page */}
-          <Route exact path="/development">
-            <Development allLessons={allLessons}/>
-          </Route>
-  
-          {/* Design Lessons Page */}
-          <Route exact path="/design">
-            <Design allLessons={allLessons}/>
-          </Route>
-  
-        </Switch>
-      </main>
+      <>
+        <Header/>
+        <main>
+          <Switch>
+    
+            {/* Home page */}
+            <Route exact path="/">
+                <Home allLessons={allLessons}/>
+            </Route>
+    
+            {/* Development Lessons Page */}
+            <Route exact path="/development">
+              <Development allLessons={allLessons}/>
+            </Route>
+    
+            {/* Design Lessons Page */}
+            <Route exact path="/design">
+              <Design allLessons={allLessons}/>
+            </Route>
+    
+          </Switch>
+        </main>
+        <Footer/>
+      </>
     );
-  } else {
+  } 
+  else {
     return(
-      <section className='loading-section'>
-        <h1>App is loading...</h1>
+      <section id='loading-section'>
+        <h1>Loading Lessons...</h1>
+        <Spinner animation="border" />
       </section>
+        
     )
   }
 }

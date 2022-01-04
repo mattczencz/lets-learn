@@ -21,8 +21,8 @@ function DevList({devLessons}) {
 
 
     return (
-        <div className="list-container">
-            <div className="list-container-top">
+        <div className="list-container my-5">
+            <div className="list-container-top mb-2">
                 <h3>Development:</h3>
                 <a href="/development">View All</a>
             </div>
