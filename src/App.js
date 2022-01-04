@@ -1,5 +1,9 @@
+// Importing React hooks
 import {Switch, Route} from 'react-router-dom';
 import { useEffect, useState } from 'react';
+
+// Importing global styling
+import './styles/app.scss';
 
 // Importing pages 
 import Home from './pages/Home';

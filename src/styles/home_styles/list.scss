@@ -1,0 +1,12 @@
+.list-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    .list-container-top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: calc(1.5rem * .5);
+    }
+}
