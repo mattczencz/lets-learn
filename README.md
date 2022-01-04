@@ -7,6 +7,7 @@
 ## Technologies Used
 * react
 * react-router-dom
+* SASS
 
 ## Wireframes
 

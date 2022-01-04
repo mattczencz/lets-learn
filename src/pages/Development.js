@@ -1,6 +1,14 @@
-function Development(props) {
+function Development({allLessons}) {
+    const devLessons = allLessons.map((lesson) => {
+        return(
+            <h1>{lesson.title}</h1>
+        )
+    })
+
     return(
-        <h1>Development</h1>
+        <div>
+            {devLessons}
+        </div>
     )
 }
 
