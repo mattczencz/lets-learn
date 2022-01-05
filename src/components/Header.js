@@ -15,6 +15,9 @@ function Header () {
                             <Nav.Link href="/development">Development</Nav.Link>
                             <Nav.Link href="/design">Design</Nav.Link>
                         </Nav>
+                        <Nav>
+                            <Nav.Link href="/new">Create Lesson</Nav.Link>
+                        </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

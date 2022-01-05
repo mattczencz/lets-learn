@@ -9,6 +9,7 @@ import './styles/app.scss';
 import Home from './pages/Home';
 import Design from './pages/Design';
 import Development from './pages/Development';
+import Form from './pages/Form';
 
 // Importing Header and Footer
 import Header from './components/Header';
@@ -30,6 +31,20 @@ function App() {
     const res = await fetch(URL)
     const data = await res.json()
     setAllLessons(data)
+  }
+
+  // Function to create lessons
+  const createLessons = async (allLessons) => {
+    // make post request to create lessons
+    await fetch(URL, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(allLessons)
+    })
+    // update list of lessons
+    getAllLessons()
   }
 
   // On load, run the function to get set the allLessons state
@@ -58,6 +73,10 @@ function App() {
             <Route exact path="/design">
               <Design allLessons={allLessons}/>
             </Route>
+
+            {/* Form routes for new and edit */}
+            <Route path="/new" render={(routerProps) => <Form {...routerProps} createLessons={createLessons}/>}/>
+            <Route path="/edit" render={(routerProps) => <Form {...routerProps}/>}/>
     
           </Switch>
         </main>
@@ -71,7 +90,6 @@ function App() {
         <h1>Loading Lessons...</h1>
         <Spinner animation="border" />
       </section>
-        
     )
   }
 }
