@@ -1,0 +1,12 @@
+#form-card {
+    border-radius: 12px;
+    box-shadow: 0px 1px 15px rgba(100,100,100,.2);
+    padding: 30px;
+    position: relative;
+
+    #delete-btn {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+}
