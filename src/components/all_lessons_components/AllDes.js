@@ -24,7 +24,7 @@ function AllDes({desLessons}) {
 
     return (
         <>
-            <Container className="mb-4">
+            <Container className="mb-4 mt-3">
                 <Row>
                     <Col>
                         <h2>Design Lessons</h2>

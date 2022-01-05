@@ -10,6 +10,8 @@
 * SASS
 * [React Bootstrap](https://react-bootstrap.github.io/)
 * [React Icons](https://react-icons.github.io/react-icons)
+* Images from [Unsplash](https://unsplash.com/)
+* Google Fonts
 
 ## Wireframes
 

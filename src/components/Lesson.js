@@ -1,6 +1,8 @@
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
+import {FaTrash, FaEdit} from 'react-icons/fa';
+
 function Lesson (props) {
     return (
         <Col sm={props.sm} md={props.md} lg={props.lg} className='mb-3'>
@@ -14,6 +16,10 @@ function Lesson (props) {
                 </Card.Body>
                 <Card.Footer>
                     <small className="text-muted"><a rel="noreferrer" target="_blank" href={`${props.url}`}>View Lesson</a></small>
+                    <div id="buttons">
+                        <FaEdit/>
+                        <FaTrash/>
+                    </div>
                 </Card.Footer>
             </Card>
         </Col>  
