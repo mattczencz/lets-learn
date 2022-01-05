@@ -4,14 +4,10 @@ import '../../styles/home_styles/hero.scss';
 function Hero () {
     return(
         <section id="home-hero">
-            <div id="home-hero-circle">
-                <h1>OR</h1>    
-            </div>    
-            <div className="home-hero-box">
-                <h1>DEV</h1>
-            </div>
-            <div className="home-hero-box">
-                <h1>DESIGN</h1>
+            <div id="overlay"></div>
+            <div id="text">
+                <h1>Let's Learn</h1>
+                <h5>Let's design and develop a better world.</h5>    
             </div>
         </section>
     )
