@@ -1,4 +1,5 @@
 import AllDev from "../components/all_lessons_components/AllDev";
+import SubHero from "../components/all_lessons_components/SubHero";
 
 function Development({allLessons}) {
 
@@ -7,6 +8,7 @@ function Development({allLessons}) {
 
     return(
         <>
+            <SubHero img="" icon=""/>
             <AllDev devLessons={devLessons.sort((a,b) => a.id - b.id)}/>
         </>
     )

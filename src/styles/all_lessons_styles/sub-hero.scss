@@ -1,0 +1,22 @@
+#sub-hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 200px;
+
+    .row {
+        height: 100%;
+        position: relative;
+    }
+    
+    .icon {
+        background-color: white;
+        font-size: 90px;
+        padding: 20px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -45px;
+        right: 50%;
+        transform: translate(50%, 0px);
+    }
+}

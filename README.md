@@ -9,6 +9,7 @@
 * react-router-dom
 * SASS
 * [React Bootstrap](https://react-bootstrap.github.io/)
+* [React Icons](https://react-icons.github.io/react-icons)
 
 ## Wireframes
 

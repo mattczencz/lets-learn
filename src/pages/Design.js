@@ -1,4 +1,5 @@
 import AllDes from "../components/all_lessons_components/AllDes";
+import SubHero from "../components/all_lessons_components/SubHero";
 
 function Design({allLessons}) {
 
@@ -7,6 +8,7 @@ function Design({allLessons}) {
 
     return(
         <>
+            <SubHero img="" icon=""/>
             <AllDes desLessons={desLessons.sort((a,b) => a.id - b.id)}/>
         </>
     )
