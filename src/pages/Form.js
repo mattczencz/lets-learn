@@ -33,7 +33,7 @@ function Form (props) {
         <Container>
             <Row>
                 <Col></Col>
-                <Col>
+                <Col id='form-card'>
                     <h2>Form:</h2>
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
@@ -48,19 +48,24 @@ function Form (props) {
                             <label for="urlInput" class="form-label">Link to the lesson:</label>
                             <input type="url" class="form-control" id="urlInput" value={newForm.url} name='url' placeholder='Example: https://google.com' onChange={handleChange}/>
                         </div>
-                        <div class="form-check">
+                        <div>
+                            <p class="form-label">What category does this belong to?</p>
+                        </div>
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="category" id="devInput" value="dev" onChange={handleChange}/>
                             <label class="form-check-label" for="categoryInput">
                                 Development
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="category" id="desInput" value="design" onChange={handleChange}/>
                             <label class="form-check-label" for="categoryInput">
                                 Design
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="mt-3">
+                            <button type="submit" class="btn btn-success">Create Lesson</button>
+                        </div>
                     </form>
                 </Col>
                 <Col></Col>
