@@ -14,12 +14,11 @@ function Lesson (props) {
                         {props.description}
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer>
+                <Card.Footer className='d-flex justify-content-between'>
                     <small className="text-muted"><a rel="noreferrer" target="_blank" href={`${props.url}`}>View Lesson</a></small>
-                    <div id="buttons">
-                        <FaEdit/>
-                        <FaTrash/>
-                    </div>
+                    <small id="buttons">
+                        <a href={`/edit/${props.id}`}><FaEdit/> / <FaTrash/></a>
+                    </small>
                 </Card.Footer>
             </Card>
         </Col>  

@@ -19,8 +19,8 @@ function Home({allLessons}) {
         <Hero/>
         
         {/* List components */}
-        <DevList devLessons={devLessons}/>
-        <DesList desLessons={desLessons}/>
+        <DevList devLessons={devLessons.sort((a,b) => a.id - b.id)}/>
+        <DesList desLessons={desLessons.sort((a,b) => a.id - b.id)}/>
         </>
     )
 }

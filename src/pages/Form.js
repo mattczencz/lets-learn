@@ -34,7 +34,7 @@ function Form (props) {
             <Row>
                 <Col></Col>
                 <Col id='form-card'>
-                    <h2>Form:</h2>
+                    <h2>Create Lesson:</h2>
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <label for="titleInput" class="form-label">Title of the lesson:</label>

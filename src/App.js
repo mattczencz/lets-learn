@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Design from './pages/Design';
 import Development from './pages/Development';
 import Form from './pages/Form';
+import Update from './pages/Update';
 
 // Importing Header and Footer
 import Header from './components/Header';
@@ -21,7 +22,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 function App() {
   // URL for API data
-  const URL = 'https://czencz-lets-learn.herokuapp.com/lessons'
+  const URL = 'https://czencz-lets-learn.herokuapp.com/lessons/'
 
   // State to hold URL data
   const [allLessons, setAllLessons] = useState(null)
@@ -44,6 +45,27 @@ function App() {
       body: JSON.stringify(allLessons)
     })
     // update list of lessons
+    getAllLessons()
+  }
+
+  // Function to update lesson
+  const updateLessons = async(allLessons, id) => {
+      await fetch(URL + id, {
+        method: "put",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(allLessons)
+      })
+      // update list of lessons
+      getAllLessons()
+  }
+
+  // Function to delete lesson
+  const deleteLesson = async (id) => {
+    await fetch (URL + id, {
+      method: "delete"
+    })
     getAllLessons()
   }
 
@@ -76,7 +98,7 @@ function App() {
 
             {/* Form routes for new and edit */}
             <Route path="/new" render={(routerProps) => <Form {...routerProps} createLessons={createLessons}/>}/>
-            <Route path="/edit" render={(routerProps) => <Form {...routerProps}/>}/>
+            <Route path="/edit/:id" render={(routerProps) => <Update {...routerProps} updateLessons={updateLessons} deleteLesson={deleteLesson} allLessons={allLessons}/>}/>
     
           </Switch>
         </main>
