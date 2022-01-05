@@ -8,7 +8,7 @@ function Design({allLessons}) {
 
     return(
         <>
-            <SubHero img="" icon=""/>
+            <SubHero icon="design"/>
             <AllDes desLessons={desLessons.sort((a,b) => a.id - b.id)}/>
         </>
     )

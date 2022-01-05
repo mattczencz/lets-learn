@@ -13,7 +13,7 @@ function Lesson (props) {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">View Lesson</small>
+                    <small className="text-muted"><a href={props.url}>View Lesson</a></small>
                 </Card.Footer>
             </Card>
         </Col>  

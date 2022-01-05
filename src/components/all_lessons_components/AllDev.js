@@ -4,10 +4,11 @@ import Lesson from "../Lesson"
 // Importing Bootstrap Components 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import CardGroup from "react-bootstrap/CardGroup"
 
 // Importing Styling
-import '../../styles/home_styles/list.scss'
+import '../../styles/all_lessons_styles/sub-page.scss'
 
 function AllDev({devLessons}) {
 
@@ -21,6 +22,15 @@ function AllDev({devLessons}) {
 
 
     return (
+        <>
+            <Container className="mb-4">
+                <Row>
+                    <Col>
+                        <h2>Development Lessons</h2>
+                        <h5>Let's develop a better world. One new skill at a time.</h5>
+                    </Col>
+                </Row>
+            </Container>
             <Container fluid>
                 <Row>
                     <CardGroup>
@@ -28,6 +38,7 @@ function AllDev({devLessons}) {
                     </CardGroup>
                 </Row>
             </Container>
+        </>       
     )
 }
 

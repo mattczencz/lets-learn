@@ -4,6 +4,7 @@ import Lesson from "../Lesson"
 // Importing Bootstrap Components 
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import CardGroup from "react-bootstrap/CardGroup"
 
 // Importing Styling
@@ -16,12 +17,21 @@ function AllDes({desLessons}) {
 
     for(let lesson of desLessons){
         lessons.push(
-            <Lesson {...lesson} key={lesson.id}/>
+            <Lesson sm={12} md={6} lg={3} {...lesson} key={lesson.id}/>
         )
     }
 
 
     return (
+        <>
+            <Container className="mb-4">
+                <Row>
+                    <Col>
+                        <h2>Design Lessons</h2>
+                        <h5>Let's design natural interactions that keep our users coming back.</h5>
+                    </Col>
+                </Row>
+            </Container>
             <Container fluid>
                 <Row>
                     <CardGroup>
@@ -29,6 +39,7 @@ function AllDes({desLessons}) {
                     </CardGroup>                 
                 </Row>
             </Container>
+        </>  
     )
 }
 

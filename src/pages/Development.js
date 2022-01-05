@@ -8,7 +8,7 @@ function Development({allLessons}) {
 
     return(
         <>
-            <SubHero img="" icon=""/>
+            <SubHero icon="dev"/>
             <AllDev devLessons={devLessons.sort((a,b) => a.id - b.id)}/>
         </>
     )
