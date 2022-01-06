@@ -2,6 +2,7 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import Button from 'react-bootstrap/Button';
 
 function Header () {
     return (
@@ -16,7 +17,7 @@ function Header () {
                             <Nav.Link href="/design">Design</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="/new">Create Lesson</Nav.Link>
+                            <Button href="/new" variant='outline-dark'>Create Lesson</Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -40,38 +40,38 @@ function Update (props) {
                         <Col id='form-card' className="mt-4" xs={10} sm={10} md={8} xl={6}>
                             <h2>Update Lesson:</h2>
                             <form onSubmit={handleSubmit}>
-                                <div class="mb-3">
-                                    <label for="titleInput" class="form-label">Title of the lesson:</label>
-                                    <input type="text" class="form-control" id="titleInput" value={editForm.title} name='title' placeholder="What's your lesson title?" onChange={handleChange}/>
+                                <div className="mb-3">
+                                    <label for="titleInput" className="form-label">Title of the lesson:</label>
+                                    <input type="text" className="form-control" id="titleInput" value={editForm.title} name='title' placeholder="What's your lesson title?" onChange={handleChange}/>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="descriptionInput" class="form-label">Description of the lesson:</label>
-                                    <textarea type="textarea" class="form-control" id="descriptionInput" value={editForm.description} name='description' placeholder='Enter a description of your lesson' onChange={handleChange}/>
+                                <div className="mb-3">
+                                    <label for="descriptionInput" className="form-label">Description of the lesson:</label>
+                                    <textarea type="textarea" className="form-control" id="descriptionInput" value={editForm.description} name='description' placeholder='Enter a description of your lesson' onChange={handleChange}/>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="urlInput" class="form-label">Link to the lesson:</label>
-                                    <input type="url" class="form-control" id="urlInput" value={editForm.url} name='url' placeholder='Example: https://google.com' onChange={handleChange}/>
+                                <div className="mb-3">
+                                    <label for="urlInput" className="form-label">Link to the lesson:</label>
+                                    <input type="url" className="form-control" id="urlInput" value={editForm.url} name='url' placeholder='Example: https://google.com' onChange={handleChange}/>
                                 </div>
                                 <div>
-                                    <p class="form-label">What category does this belong to?</p>
+                                    <p className="form-label">What category does this belong to?</p>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="category" id="devInput" value="dev" onChange={handleChange} checked/>
-                                    <label class="form-check-label" for="categoryInput">
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="radio" name="category" id="devInput" value="dev" onChange={handleChange} checked/>
+                                    <label className="form-check-label" for="categoryInput">
                                         Development
                                     </label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="category" id="desInput" value="design" onChange={handleChange}/>
-                                    <label class="form-check-label" for="categoryInput">
+                                <div className="form-check form-check-inline">
+                                    <input className="form-check-input" type="radio" name="category" id="desInput" value="design" onChange={handleChange}/>
+                                    <label className="form-check-label" for="categoryInput">
                                         Design
                                     </label>
                                 </div>
-                                <div class="mt-3 d-flex">
-                                    <button type="submit" class="btn btn-success me-auto">Update Lesson</button>
+                                <div className="mt-3 d-flex">
+                                    <button type="submit" className="btn btn-success me-auto">Update Lesson</button>
                                 </div>
                             </form>
-                            <button id='delete-btn' onClick={removeLesson} class="btn btn-danger">Delete Lesson</button>
+                            <button id='delete-btn' onClick={removeLesson} className="btn btn-danger">Delete Lesson</button>
 
                         </Col>
                     </Row>
@@ -88,38 +88,38 @@ function Update (props) {
                     <Col id='form-card'>
                         <h2>Update Lesson:</h2>
                         <form onSubmit={handleSubmit}>
-                            <div class="mb-3">
-                                <label for="titleInput" class="form-label">Title of the lesson:</label>
-                                <input type="text" class="form-control" id="titleInput" value={editForm.title} name='title' placeholder="What's your lesson title?" onChange={handleChange}/>
+                            <div className="mb-3">
+                                <label for="titleInput" className="form-label">Title of the lesson:</label>
+                                <input type="text" className="form-control" id="titleInput" value={editForm.title} name='title' placeholder="What's your lesson title?" onChange={handleChange}/>
                             </div>
-                            <div class="mb-3">
-                                <label for="descriptionInput" class="form-label">Description of the lesson:</label>
-                                <textarea type="textarea" class="form-control" id="descriptionInput" value={editForm.description} name='description' placeholder='Enter a description of your lesson' onChange={handleChange}/>
+                            <div className="mb-3">
+                                <label for="descriptionInput" className="form-label">Description of the lesson:</label>
+                                <textarea type="textarea" className="form-control" id="descriptionInput" value={editForm.description} name='description' placeholder='Enter a description of your lesson' onChange={handleChange}/>
                             </div>
-                            <div class="mb-3">
-                                <label for="urlInput" class="form-label">Link to the lesson:</label>
-                                <input type="url" class="form-control" id="urlInput" value={editForm.url} name='url' placeholder='Example: https://google.com' onChange={handleChange}/>
+                            <div className="mb-3">
+                                <label for="urlInput" className="form-label">Link to the lesson:</label>
+                                <input type="url" className="form-control" id="urlInput" value={editForm.url} name='url' placeholder='Example: https://google.com' onChange={handleChange}/>
                             </div>
                             <div>
-                                <p class="form-label">What category does this belong to?</p>
+                                <p className="form-label">What category does this belong to?</p>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="category" id="devInput" value="dev" onChange={handleChange} />
-                                <label class="form-check-label" for="categoryInput">
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="radio" name="category" id="devInput" value="dev" onChange={handleChange} />
+                                <label className="form-check-label" for="categoryInput">
                                     Development
                                 </label>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="category" id="desInput" value="design" onChange={handleChange} checked/>
-                                <label class="form-check-label" for="categoryInput">
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="radio" name="category" id="desInput" value="design" onChange={handleChange} checked/>
+                                <label className="form-check-label" for="categoryInput">
                                     Design
                                 </label>
                             </div>
-                            <div class="mt-3 d-flex">
-                                <button type="submit" class="btn btn-success me-auto">Update Lesson</button>
+                            <div className="mt-3 d-flex">
+                                <button type="submit" className="btn btn-success me-auto">Update Lesson</button>
                             </div>
                         </form>
-                        <button onClick={removeLesson} class="btn btn-danger">Delete Lesson</button>
+                        <button onClick={removeLesson} className="btn btn-danger">Delete Lesson</button>
                     </Col>
                     <Col></Col>
                 </Row>

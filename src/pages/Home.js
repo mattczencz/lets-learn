@@ -6,7 +6,7 @@ import DevList from "../components/home_components/DevList";
 import DesList from "../components/home_components/DesList";
 
 function Home({allLessons}) {
-
+    
     // Filtering through all of the lessons, returning ones that are marked "dev"
     const devLessons = allLessons.filter((lesson) => lesson.category === "dev")
 

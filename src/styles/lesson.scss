@@ -1,0 +1,7 @@
+#buttons a{
+    text-decoration: none;
+
+    &:hover, &:link, &:visited, &:focus {
+        text-decoration: none;
+    }
+}

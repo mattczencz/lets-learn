@@ -14,10 +14,37 @@ function DesList({desLessons}) {
     // Array to hold 4 Lessons
     const cappedLessons = []
 
-    for(let i = 0; i < 4; i++){
+    let i = 0;
+    while(i < 4){
+        
+        // If there are no lesson to pull from, display a message
+        if(i === 0 && desLessons[i] === undefined){
+            return (
+                <div className="list-container my-5">
+                    <div className="list-container-top mb-2">
+                        <h3>Design:</h3>
+                        <a href="/design">View All</a>
+                    </div>
+                    <Container fluid>
+                        <Row>
+                            <CardGroup>
+                                <h2>There are no lessons yet... add some!</h2>
+                            </CardGroup>
+                        </Row>
+                    </Container>
+                </div>
+            )
+        } 
+        // If the count is higher than the available lessons, exit the loop
+        else if(desLessons[i] === undefined){
+            break;
+        }
+
         cappedLessons.push(
-            <Lesson {...desLessons[i]} key={desLessons[i].id}/>
+            <Lesson sm={12} md={6} lg={3} {...desLessons[i]} key={desLessons[i].id}/>
         )
+
+        i++
     }
 
     return (

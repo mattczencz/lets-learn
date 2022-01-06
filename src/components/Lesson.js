@@ -3,6 +3,8 @@ import Col from 'react-bootstrap/Col';
 
 import {FaTrash, FaEdit} from 'react-icons/fa';
 
+import '../styles/lesson.scss';
+
 function Lesson (props) {
     return (
         <Col sm={props.sm} md={props.md} lg={props.lg} className='mb-3'>
