@@ -15,11 +15,34 @@ function AllDes({desLessons}) {
 
     const lessons = []
 
-    for(let lesson of desLessons){
-        lessons.push(
-            <Lesson sm={12} md={6} lg={3} {...lesson} key={lesson.id}/>
+    if(desLessons.length !== 0){
+        for(let lesson of desLessons){
+            lessons.push(
+                <Lesson sm={12} md={6} lg={3} {...lesson} key={lesson.id}/>
+            )
+        }
+    } else {
+        return (
+            <>
+                <Container className="mb-4 mt-3">
+                    <Row>
+                        <Col>
+                            <h2>Design Lessons</h2>
+                            <h5>Let's design natural interactions that keep our users coming back.</h5>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container fluid>
+                    <Row>
+                        <CardGroup>
+                            <h3>It looks like no lessons have been added yet... add some!</h3>
+                        </CardGroup>                 
+                    </Row>
+                </Container>
+            </>  
         )
     }
+    
 
 
     return (
