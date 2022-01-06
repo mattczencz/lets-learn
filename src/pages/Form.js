@@ -30,6 +30,7 @@ function Form (props) {
             url: "",
             category: ""
         })
+        props.history.push('/')
     }
     
 
